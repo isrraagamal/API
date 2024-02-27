@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfConsumer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfConsumer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <StackPanel>
+        <Button Height="40" Content="GetAll Departments" Click="Button_Click"/>
+        <ListBox Name="DeptList" Height="100">
+            <ListBox.ItemTemplate>
+                <ItemContainerTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding name}">
+
+                        </TextBlock>
+                        <TextBlock Text="_">
+
+                        </TextBlock>
+                        <TextBlock Text="{Binding managerName}">
+
+                        </TextBlock>
+                        <TextBlock Text="_">
+
+                        </TextBlock>
+                        <TextBlock Text="{Binding location}">
+
+                        </TextBlock>
+
+
+                    </WrapPanel>
+                </ItemContainerTemplate>
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+    </StackPanel>
+</Window>
